@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+    honeypot:
+        build: .
+        container_name: honeypot
+        command: "/usr/sbin/sshd -D"
+        ports:
+            - 22:22
